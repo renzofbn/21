@@ -148,7 +148,7 @@ const gameCore = (()=>{
     function displayCard(player, card='grey_back'){
 
         const cardImg = document.createElement('img');
-        cardImg.src = `assets/cartas/${ card }.png`;
+        cardImg.src = `assets/cards/${ card }-min.png`;
         cardImg.classList.add('pockerCard');
         divPlayersCards[player].append( cardImg );
 
