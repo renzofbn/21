@@ -190,7 +190,7 @@ const gameCore = (()=>{
             } else {
                 alert('Computadora Gana')
             }
-        }, 100 );
+        }, 1000 );
         btnNewGame.disabled = false;
     }
 
