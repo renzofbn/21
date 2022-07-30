@@ -10,7 +10,6 @@ html, body {
     background-color: black;
     color: white;
     padding: 20px;
-    font-size: 25px;
 }
 
 .pockerCard {
@@ -25,21 +24,18 @@ html, body {
 }
 
 #divBotones{ 
-    margin-top: 20px;
+    margin: 20px;
 }
-
-
-
-
 
 .wrapper {
     display: flex;
+    margin-bottom: 10px;
   }
   
   .wrapper .icon-container {
-    position: relative;
-    width: 90px;
-    height: 90px;
+    position: absolute; 
+    width: 70px;
+    height: 70px;
     background-color: #ffffff;
     color: #121212;
     display: flex;
@@ -49,11 +45,21 @@ html, body {
     border-radius: 28%;
     box-shadow: 0 5px 15px -5px rgb(0 0 0 / 10%);
     cursor: pointer;
-    font-size: 36px;
+    font-size: 28px;
     text-decoration: none;
     opacity: 0.99;
     overflow: hidden;
   }
+  .wrapper .icon-container.github{
+    bottom: 20px;
+    right: 10px;
+  }
+
+  .wrapper .icon-container.question {
+    bottom: 100px;
+    right: 10px;
+  }
+
   
   .wrapper .icon-container::before {
     content: "";
@@ -91,12 +97,51 @@ html, body {
   .wrapper .icon-container.github:hover::before {
     background-color: #1b1f23;
   }
+
+  .wrapper .icon-container.question:hover::before {
+    background-color: #00a9af;
+  }
+
+  @media screen and (max-height: 800px) {
+    .pockerCard {
+      width: 120px;
+      left: 100px;
+      margin-left: -75px;
+  }
+
+  #computadora-cartas, #jugador-cartas {
+    height: 200px;
+  }
+
+  .titulo {
+    padding: 15px;
+}
+}
   
-  @media screen and (max-width: 768px) {
+  @media screen and (max-height: 200px) {
     .wrapper .icon-container {
-      width: 45px;
-      height: 45px;
+      width: 60px;
+      height: 60px;
       margin: 0 5px;
       font-size: 18px;
     }
+
+    .wrapper .icon-container.question {
+      bottom: 90px;
+    }
+
+    .pockerCard {
+      width: 90px;
+      left: 100px;
+      margin-left: -75px;
+  }
+
+  #computadora-cartas, #jugador-cartas {
+    height: 150px;
+  }
+
+  .titulo {
+    padding: 5px;
+}
+
   }
